@@ -31,5 +31,6 @@ Desarrollo
 ![Captura3](https://user-images.githubusercontent.com/48154086/90995118-97963680-e580-11ea-8700-a5f6615b1b1a.PNG)
 
 ## Part 3: Local Storage
+- Se realizó la implementación de localStorage, sin estar loggeado en la app localStorage es falso. 
 
-
+![Captura5](https://user-images.githubusercontent.com/48154086/91365323-6b6bf700-e7c6-11ea-929b-ba445aeea0a4.PNG)
