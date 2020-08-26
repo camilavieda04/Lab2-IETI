@@ -18,21 +18,30 @@ class App extends Component {
         this.handlePriorityChange = this.handlePriorityChange.bind(this);
         this.handleDateChange = this.handleDateChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {isLoggedIn:false};
     }
     
 
     render() {
-        const LoginView = () => (
-            <Login  />
-        );
+        localStorage.setItem('isLoggedIn',false);
+        localStorage.setItem('username','usuario');
+        localStorage.setItem('password','contra');
+
+        const LoginView = () => {
+            const loggedIn = localStorage.getItem('isLoggedIn');
+            if (loggedIn==="true"){
+                return <TodoApp />
+            }
+            else{
+                return <Login  />
+            }
+        };
 
         const TodoAppView = () => (
             <TodoApp />
         );
 
         this.state = {
-            LoginView: LoginView,
-            TodoAppView : TodoAppView,
             isLoggedIn: false
         };
 
